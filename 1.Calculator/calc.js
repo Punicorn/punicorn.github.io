@@ -1,21 +1,21 @@
 function sum(a, b) {
-    return a + b;
+  return a + b;
 }
 
 function subtract(a, b) {
-    return a - b;
+  return a - b;
 }
 
 function multiply(a, b) {
-    return a * b;
+  return a * b;
 }
 
 function divide(a, b) {
-    return a / b;
+  return a / b;
 }
 
 function divInt(a, b) {
-    return (a - a % b) / b;
+  return (a - a % b) / b;
 }
 
 console.log(divInt(7, 2));
