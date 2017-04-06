@@ -17,4 +17,4 @@ function binarySearch(arr, target) {
   }
 }
 
-console.log(binarySearch([3,5,6,8,10,13], 12)); //5-th
+console.log(binarySearch([3,5,6,8,10,13], 13)); //5-th
