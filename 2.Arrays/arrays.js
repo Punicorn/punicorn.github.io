@@ -1,9 +1,11 @@
-console.log(
-  Object.prototype.toString.call([3,'da',4]) === '[object Array]');
-console.log([48] instanceof Array);
+function isArray1(arr) {
+  return arr instanceof Array;
+}
+
+console.log(isArray1([48]));
 
 function isArray2(arr) {
-  return Array.isArray(arr);
+  return Object.prototype.toString.call(arr) === '[object Array]';
 }
 
 console.log(isArray2([3,null,undefined,4]));
