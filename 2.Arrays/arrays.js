@@ -1,20 +1,18 @@
-function isArray1(arr) {
-  return Object.prototype.toString.call(arr) === '[object Array]';
-}
-
-console.log(isArray1([3,null,undefined,4]));
-console.log(isArray1(null));
+console.log(
+  Object.prototype.toString.call([3,'da',4]) === '[object Array]');
+console.log([48] instanceof Array);
 
 function isArray2(arr) {
   return Array.isArray(arr);
 }
 
 console.log(isArray2([3,null,undefined,4]));
-console.log(isArray2({0:2, 1:3}));
+console.log(isArray2({0:2, 1:3, length:2}));
 
 function range(from, to, step) {
   var arr = [];
-  if (!to) {
+  if (!to && (to !== 0)) { //do we want Srting?
+  //if (!(to instanceof Number)) {
     to = from;
     from = 0;
   }
@@ -23,10 +21,10 @@ function range(from, to, step) {
     if (i == to) continue; // drops the last num in negative case
     arr.push(i);
   }
-  return(arr);
+  return arr;
 }
 
-console.log(range(-10,-20,-5));
+console.log(range(10,'20',5));
 
 function compactCycle(arr) {
   var newArr = [];
