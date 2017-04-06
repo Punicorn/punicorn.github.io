@@ -1,8 +1,9 @@
 function isArray1(arr) {
-  return arr instanceof Array;
+  return Object.prototype.toString.call(arr) === '[object Array]';
 }
 
 console.log(isArray1([3,null,undefined,4]));
+console.log(isArray1(null));
 
 function isArray2(arr) {
   return Array.isArray(arr);
