@@ -2,18 +2,19 @@ function binarySearch(arr, target) {
   var half = 0;
   var left = 0;
   var right = arr.length - 1;
-  while(true) {
+  while(left <= right && target != arr[half]) {
     half = Math.floor((right + left) / 2);
     if(target < arr[half]) {
-      right = half -1;
+      right = half - 1;
     } else if(target > arr[half]) {
       left = half + 1;
-    } else {
-      return half;
     }
-    if(left > right) {
-      return -1;
-    }
+  }
+
+  if(target == arr[half]) {
+    return half;
+  } else {
+    return -1;
   }
 }
 
