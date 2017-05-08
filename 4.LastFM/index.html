@@ -3,14 +3,49 @@
   <head>
     <title>Last.FM API</title>
     <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/index.css" type="text/css">
   </head>
   <body>
-    Some text.
+    
+    <div class="content">
+      <header>
+        <div class="wrapper">
+          Last.fm API
+        </div>
+      </header>
+      <main class="wrapper">
+
+
+
+        <div class="search-box">
+          <input id="searchInput" type="search" name="search-field" placeholder="Ex.: LP">
+          <button id="searchButton" type="submit">Search</button>
+        </div>
+
+        <div class="units-box">
+          <!--<div data-number="i" class="unit">
+            <img src="https://lastfm-img2.akamaized.net/i/u/174s/d13fec2211254bc08680618a0b5e10ca.png">
+              <div class="title">Kseniya Ksitnick Kseniya Ksitnick Kseniya Ksitnick</div>
+          </div>
+          <div class="paginator cleaner">
+            <span class="current-page pageNum">1</span>
+            <span class="pageNum">2</span>
+          </div>-->
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      <div class="wrapper">
+        Developed By Viachaslau Karzhou (punicorn48@gmail.com)
+      </div>
+    </footer>
     <script src="js/lastfmLoader.js"></script>
     <script src="js/topArtistsLoader.js"></script>
     <script src="js/artistSearch.js"></script>
     <script src="js/artistInfoLoader.js"></script>
     <script src="js/albumInfoLoader.js"></script>
-    <script src="js/usageExample.js"></script>
+    <!--<script src="js/usageExample.js"></script>-->
+    <script src="js/searchHandler.js"></script>
   </body>
 </html>
