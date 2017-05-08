@@ -15,7 +15,7 @@ LastfmLoader.prototype.load = function(callback, difParams) {
     var type = request.getResponseHeader('Content-Type');
     if (request.readyState === 4 && request.status === 200 && callback &&
       type.indexOf('application/json') + 1 && typeof(callback) === 'function') {
-      callback(JSON.parse(decodeURI(request.responseText)));
+      callback(JSON.parse(request.responseText));
     }
   };
   request.send();
@@ -23,8 +23,8 @@ LastfmLoader.prototype.load = function(callback, difParams) {
 
 LastfmLoader.prototype.getURL = function() {
   return this.params.url + 'api_key=' + encodeURIComponent(this.params.key) +
-  '&format=' + encodeURIComponent(this.params.format) + '&method=' + 
-  encodeURIComponent(this.params.method) + '&' + this.getQuery();
+    '&format=' + encodeURIComponent(this.params.format) + '&method=' + 
+    encodeURIComponent(this.params.method) + '&' + this.getQuery();
 };
 
 LastfmLoader.prototype.getQuery = function(){};

@@ -6,6 +6,6 @@ ArtistSearchLoader.prototype = Object.create(LastfmLoader.prototype);
 
 ArtistSearchLoader.prototype.getQuery = function(){
   return 'artist=' + encodeURIComponent(this.params.artist) + '&page=' +
-      encodeURIComponent(this.params.page) + '&limit=' +
-      encodeURIComponent(this.params.limit);
+    encodeURIComponent(this.params.page) + '&limit=' +
+    encodeURIComponent(this.params.limit);
 };
