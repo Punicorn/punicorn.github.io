@@ -1,8 +1,10 @@
 function TopArtistsLoader(p) {
   LastfmLoader.call(this, p);
   this.params.method = 'chart.getTopArtists';
-  this.getQuery = function(){
-    return 'page=' + this.params.page + '&limit=' + this.params.limit;
-  };
 }
 TopArtistsLoader.prototype = Object.create(LastfmLoader.prototype);
+
+TopArtistsLoader.prototype.getQuery = function(){
+  return 'page=' + encodeURIComponent(this.params.page) + '&limit=' +
+    encodeURIComponent(this.params.limit);
+};

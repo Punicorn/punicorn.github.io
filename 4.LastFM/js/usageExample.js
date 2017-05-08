@@ -16,7 +16,7 @@ loader3.load(function(data) {
   console.log(data);
 });
 
-var loader4 = new ArtistSearchLoader({page:2, limit:5, artist:'Sitnik'});
+var loader4 = new ArtistSearchLoader({page:2, limit:5, artist:'Алла Пугачёва'});
 loader4.load(function(data) {
   console.log('Artist search loader:');
   console.log(data);
