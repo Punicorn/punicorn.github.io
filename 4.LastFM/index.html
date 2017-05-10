@@ -4,26 +4,27 @@
     <title>Last.FM API</title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link rel="stylesheet" href="css/artist.css" type="text/css">
   </head>
   <body>
     
     <div class="content">
       <header>
         <div class="wrapper">
-          Last.fm API
+          <div class="center">
+            Last.fm API
+          </div>
         </div>
       </header>
       <main class="wrapper">
-
-
-
         <div class="search-box">
           <input id="searchInput" type="search" name="search-field" placeholder="Ex.: LP">
           <button id="searchButton" type="submit">Search</button>
         </div>
 
         <div class="units-box">
-          <!--<div data-number="i" class="unit">
+          <!-- EXAMPLE
+            <div data-number="i" class="unit artist-unit">
             <img src="https://lastfm-img2.akamaized.net/i/u/174s/d13fec2211254bc08680618a0b5e10ca.png">
               <div class="title">Kseniya Ksitnick Kseniya Ksitnick Kseniya Ksitnick</div>
           </div>
@@ -37,7 +38,9 @@
 
     <footer>
       <div class="wrapper">
-        Developed By Viachaslau Karzhou (punicorn48@gmail.com)
+        <div class=="center">
+          Developed By Viachaslau Karzhou (punicorn48@gmail.com)
+        </div>
       </div>
     </footer>
     <script src="js/lastfmLoader.js"></script>
@@ -45,7 +48,9 @@
     <script src="js/artistSearch.js"></script>
     <script src="js/artistInfoLoader.js"></script>
     <script src="js/albumInfoLoader.js"></script>
+    <script src="js/artistTopAlbumsLoader.js"></script>
     <!--<script src="js/usageExample.js"></script>-->
+    <script src="js/drawContent.js"></script>
     <script src="js/searchHandler.js"></script>
   </body>
 </html>

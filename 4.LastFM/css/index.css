@@ -11,6 +11,7 @@ header {
   color: white;
   font-size: 18px;
   margin-bottom: 20px;
+  display: flex;
 }
 
 .wrapper {
@@ -20,8 +21,12 @@ header {
   height: 100%;
   margin: 0 auto;
   padding: 0 12px;
-  display: table;
   box-sizing: border-box;
+  display: inherit;
+}
+
+.center {
+  margin: auto 0;
 }
 
 .content {
@@ -36,6 +41,7 @@ footer {
   font-size: 12px;
   padding: 8px 0;
   margin-top: -30px;
+  display: flex;
 }
 
 .search-box {
@@ -131,5 +137,3 @@ footer {
 .cleaner {
     clear: both;
 }
-
-@import url("artist.css");
