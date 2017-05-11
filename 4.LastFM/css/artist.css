@@ -46,3 +46,12 @@ article .a-title {
 .album-text div {
   margin: 12px 0;
 }
+
+.audio-unit {
+  padding: 6px 0;
+  display: flex;
+}
+
+audio + span {
+  margin: auto 12px;
+}

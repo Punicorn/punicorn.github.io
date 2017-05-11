@@ -12,7 +12,6 @@ var drawSearchPageHandler = function(data) {
   console.log(pagesNum);
   var paginator = document.createElement('div');
   paginator.className = 'paginator cleaner';
-  //page += '<div class="paginator cleaner">';
   for(let i = 1; i <= Math.ceil(pagesNum) && i < 31; i++) {
     var current;
     if(+data.results['opensearch:Query'].startPage === i) {
@@ -70,18 +69,13 @@ var drawAlbumInfoHandler = function(data) {
     var trackBox = document.createElement('div');
     trackBox.className = 'cleaner';
     var tracks = '';
-    for(let i = 1; i < 3; i++) {
-      tracks += '<div><audio controls src="' + i + '.mp3"/></div>';
+    for(let i = 0; i < data.album.tracks.track.length; i++) {
+      tracks += '<div class="audio-unit"><audio controls src="mp3/1.mp3">' +
+        '</audio><span>' + data.album.tracks.track[i].name + '</span></div>';
     }
     trackBox.innerHTML = tracks;
     article2.appendChild(trackBox);
     main.appendChild(article2);
-
-
-
-
-
-
 };
 
 function drawTitleAndLikes(theTitle) {
@@ -128,10 +122,15 @@ function drawAlbumTextContent(data) {
   var year = '<div>Year: ' + Math.floor(15 * Math.random() + 1997) + '.</div>';
   var genre = '<div>Genre: ';
   var tags = data.album.tags.tag;
-  for(let i = 0; i < tags.length - 1; i++) {
-    genre += tags[i].name + ', ';
+  if(tags.length === 0) {
+    genre += 'none.</div>';
+  } else {
+    for(let i = 0; i < tags.length - 1; i++) {
+      genre += tags[i].name + ', ';
+    }
+    genre += tags[tags.length - 1].name + '.</div>';
   }
-  genre += tags[tags.length - 1].name + '.</div>';
+  
   var textContent = '<div class="album-text">' + album + year +
     genre + '</div>';
     return textContent;
