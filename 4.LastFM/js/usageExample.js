@@ -32,3 +32,9 @@ loader5.load(function(data) {
   console.log('Album info loader:');
   console.log(data);
 }, {mbid:'63b3a8ca-26f2-4e2b-b867-647a6ec2bebd'});
+
+var loader6 = new ArtistTopAlbumsLoader();
+loader6.load(function(data) {
+  console.log('Artist Top Albums loader:');
+  console.log(data);
+}, {artist:'50 cent'});

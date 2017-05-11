@@ -1,0 +1,57 @@
+.a-title {
+  max-width: 1060px;
+  font-size: 22px;
+  font-weight: bolder;
+  padding: 24px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  float: left;
+}
+
+.likes {
+  color: #0844A4;
+  font-size: 22px;
+  padding: 24px 0;
+  float: right;
+}
+
+.likes span {
+  color: #CCC;
+}
+
+.a-content img {
+  width: 300px;
+  height: 300px;
+  float: left;
+  margin: 0 12px 6px;
+  background-color: #d3d9e0;
+}
+
+.a-content {
+  padding: 18px 0;
+}
+
+article .a-title {
+  color: #3A0D52;
+}
+
+.album-text {
+  height: 300px;
+  font-weight: bold;
+  padding: 12px 12px 0;
+  margin: 0 12px 6px;
+}
+
+.album-text div {
+  margin: 12px 0;
+}
+
+.audio-unit {
+  padding: 6px 0;
+  display: flex;
+}
+
+audio + span {
+  margin: auto 12px;
+}
